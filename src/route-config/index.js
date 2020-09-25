@@ -51,6 +51,21 @@ export default [
     ]
   },
   {
+    path: '/mobile-otp',
+    component: DefaultLayout, //loadable(() => import('../layouts/default')),
+    routes: [
+      {
+        resources: [],
+        component: loadable(() =>
+          import(
+            /* webpackChunkName: "mobile-otp" */ '../components/pages/mobile-otp'
+          )
+        ),
+        bundle: 'mobile-otp'
+      }
+    ]
+  },
+  {
     path: '/sign-up',
     component: DefaultLayout, // loadable(() => import('../layouts/default')),
     routes: [

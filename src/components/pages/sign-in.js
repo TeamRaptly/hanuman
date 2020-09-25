@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link as RouterLink } from 'react-router-dom';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -11,18 +12,16 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
+import { Divider, List, ListItem } from '@material-ui/core';
+import PhoneIcon from '@material-ui/icons/Phone';
 
 const useStyles = makeStyles((theme) => ({
-  '@global': {
-    body: {
-      backgroundColor: theme.palette.common.white
-    }
-  },
   paper: {
     marginTop: theme.spacing(8),
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'center'
+    alignItems: 'center',
+    marginBottom: '15px'
   },
   avatar: {
     margin: theme.spacing(1),
@@ -30,10 +29,24 @@ const useStyles = makeStyles((theme) => ({
   },
   form: {
     width: '100%', // Fix IE 11 issue.
-    marginTop: theme.spacing(1)
+    marginTop: theme.spacing(1),
+    marginBottom: theme.spacing(2)
   },
   submit: {
-    margin: theme.spacing(3, 0, 2)
+    margin: theme.spacing(3, 0, 2),
+    textTransform: 'none',
+    fontSize: '18px'
+  },
+  heroButton: {
+    backgroundColor: '#ffffff',
+    marginTop: theme.spacing(2),
+    textTransform: 'none'
+  },
+  listButton: {
+    justifyContent: 'center'
+  },
+  listButton1: {
+    justifyContent: 'center'
   }
 }));
 
@@ -96,6 +109,35 @@ const LoginView = ({ onSubmit }) => {
               </Link>
             </Grid>
           </Grid>
+        </form>
+      </div>
+      <Divider />
+      <div>
+        <form className={classes.form}>
+          <Button
+            variant="contained"
+            fullWidth
+            className={classes.heroButton}
+            component={RouterLink}
+            to="/mobile-otp"
+            startIcon={<PhoneIcon />}
+          >
+            Sign in with phone
+          </Button>
+          <Button
+            variant="contained"
+            fullWidth
+            className={classes.heroButton}
+            component={RouterLink}
+          >
+            <div className={classes.icon}>
+              <Avatar
+                alt="google"
+                src="/assets/images/btn_google_light_pressed_ios.svg"
+              />
+            </div>
+            Sign in with google
+          </Button>
         </form>
       </div>
     </Container>

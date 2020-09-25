@@ -31,7 +31,11 @@ class MapContainer extends Component {
   render() {
     return (
       <CurrentLocation centerAroundCurrentLocation google={this.props.google}>
+<<<<<<< HEAD
         <Marker onClick={this.onMarkerClick} name="current location" />
+=======
+        <Marker onClick={this.onMarkerClick} name={'current location'} />
+>>>>>>> f7bfe8d... creating sign-in-up with mobile otp pages and changes in burger menu according to scenario given
         <InfoWindow
           marker={this.state.activeMarker}
           visible={this.state.showingInfoWindow}
