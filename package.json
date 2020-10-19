@@ -20,6 +20,7 @@
     "dev:build-server": "cd src && npm run build-dev-server",
     "dev:build-client": "cd src && npm run build-dev-client",
     "dev-server": "cd src && cross-env HOST_ENV=local NODE_ENV=development npm run dev-server",
+    "dev-container": "npm run dev & npm run dev-server",
     "debug-server": "cd src && cross-env HOST_ENV=local NODE_ENV=development npm run dev-server -- --inspect",
     "analyze": "cross-env NODE_ENV=production npm-run-all --parallel analyze:*",
     "analyze:client-bundle": "cd src && npm run analyze-client-bundle",

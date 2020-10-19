@@ -1,4 +1,4 @@
-FROM node:alpine
+FROM node:12
 
 WORKDIR /app
 
@@ -7,6 +7,7 @@ ENV PATH /app/node_modules/.bin:$PATH
 COPY package.json ./
 COPY package-lock.json ./
 
+RUN mkdir src
 COPY src/package.json ./src
 COPY src/package-lock.json ./src
 
@@ -14,5 +15,4 @@ RUN npm run c-install
 
 COPY . ./
 
-CMD ["npm", "run", "start"]
-
+CMD ["npm", "run", "dev-container"]
