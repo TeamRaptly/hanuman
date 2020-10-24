@@ -1,147 +1,38 @@
 import React from 'react';
-import { Link as RouterLink } from 'react-router-dom';
-import Avatar from '@material-ui/core/Avatar';
-import Button from '@material-ui/core/Button';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import TextField from '@material-ui/core/TextField';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Checkbox from '@material-ui/core/Checkbox';
-import Link from '@material-ui/core/Link';
-import Grid from '@material-ui/core/Grid';
-import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
-import Typography from '@material-ui/core/Typography';
+import { CssBaseline, Container, Divider } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import Container from '@material-ui/core/Container';
-import { Divider } from '@material-ui/core';
-import PhoneIcon from '@material-ui/icons/Phone';
+import helpers from '../../helpers';
+import SignInForm from '../sign-in-form';
+import SignInWithPhoneButton from '../sign-in-phone-button';
+import SignInWithGoogleButton from '../sign-in-google-button';
 
 const useStyles = makeStyles((theme) => ({
-  paper: {
-    marginTop: theme.spacing(8),
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    marginBottom: '15px'
-  },
-  avatar: {
-    margin: theme.spacing(1),
-    backgroundColor: theme.palette.secondary.main
-  },
-  form: {
-    width: '100%', // Fix IE 11 issue.
-    marginTop: theme.spacing(1),
-    marginBottom: theme.spacing(2)
-  },
-  submit: {
-    margin: theme.spacing(3, 0, 2),
-    textTransform: 'none',
-    fontSize: '18px'
-  },
-  heroButton: {
+  additionalButtonStyles: {
     backgroundColor: '#ffffff',
     marginTop: theme.spacing(2),
     textTransform: 'none'
   },
-  listButton: {
-    justifyContent: 'center'
-  },
-  listButton1: {
-    justifyContent: 'center'
+  additionalSignInOptions: {
+    margin: theme.spacing(3, 0, 2),
+    textTransform: 'none',
+    fontSize: '18px'
   }
 }));
 
-const LoginView = ({ onSubmit }) => {
+const LoginView = ({ onSubmit, t: translate }) => {
   const classes = useStyles();
 
   return (
     <Container component="main" maxWidth="xs">
       <CssBaseline />
-      <div className={classes.paper}>
-        <Avatar className={classes.avatar}>
-          <LockOutlinedIcon />
-        </Avatar>
-        <Typography component="h1" variant="h5">
-          Sign in
-        </Typography>
-        <form className={classes.form} noValidate onSubmit={onSubmit}>
-          <TextField
-            variant="outlined"
-            margin="normal"
-            required
-            fullWidth
-            id="email"
-            label="Email Address"
-            name="email"
-            type="email"
-            placeholder="Email"
-            autoComplete="email"
-            autoFocus
-          />
-          <TextField
-            variant="outlined"
-            margin="normal"
-            required
-            fullWidth
-            name="password"
-            label="Password"
-            type="password"
-            placeholder="Password"
-            id="password"
-            autoComplete="current-password"
-          />
-          <FormControlLabel
-            control={<Checkbox value="remember" color="primary" />}
-            label="Remember me"
-          />
-          <Button
-            type="submit"
-            fullWidth
-            variant="contained"
-            color="primary"
-            className={classes.submit}
-          >
-            Sign In
-          </Button>
-          <Grid container>
-            <Grid item xs>
-              <Link href="/sign-up" variant="body2">
-                Don&apos;t have an account? Sign Up
-              </Link>
-            </Grid>
-          </Grid>
-        </form>
-      </div>
+      <SignInForm onSubmit={onSubmit} />
       <Divider />
-      <div>
-        <form className={classes.form}>
-          <Button
-            variant="contained"
-            fullWidth
-            className={classes.heroButton}
-            component={RouterLink}
-            to="/mobile-otp"
-            startIcon={<PhoneIcon />}
-          >
-            Sign in with phone
-          </Button>
-          <Button
-            variant="contained"
-            fullWidth
-            className={classes.heroButton}
-            component={RouterLink}
-          >
-            <div className={classes.icon}>
-              <Avatar
-                alt="google"
-                src="/assets/images/btn_google_light_pressed_ios.svg"
-              />
-            </div>
-            Sign in with google
-          </Button>
-        </form>
+      <div className={classes.additionalSignInOptions}>
+        <SignInWithPhoneButton classes={classes.additionalButtonStyles} />
+        <SignInWithGoogleButton classes={classes.additionalButtonStyles} />
       </div>
     </Container>
   );
 };
 
-export default LoginView;
+export default helpers(['t'])(LoginView);
