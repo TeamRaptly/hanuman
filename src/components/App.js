@@ -20,12 +20,8 @@ const mapStateToProps = (state) => ({
 const styles = (theme) => ({
   materialButton: {
     padding: theme.spacing(1),
-<<<<<<< HEAD
-    margin: theme.spacing(1)
-=======
     margin: theme.spacing(1),
     textTransform: 'none'
->>>>>>> f7bfe8d... creating sign-in-up with mobile otp pages and changes in burger menu according to scenario given
   },
   about: {
     display: 'flex',

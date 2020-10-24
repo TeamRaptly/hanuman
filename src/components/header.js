@@ -82,7 +82,7 @@ export default function SearchAppBar() {
           <ListItemAvatar>
             <Avatar>R</Avatar>
           </ListItemAvatar>
-          <ListItemText primary="Raptly" variant={'h6'} />
+          <ListItemText primary="Raptly" variant="h6" />
         </ListItem>
       </div>
       <Divider />

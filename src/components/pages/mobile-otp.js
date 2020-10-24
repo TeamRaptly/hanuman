@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
   form: {
     width: '100%', // Fix IE 11 issue.
     marginTop: theme.spacing(1),
-    marginBottom: theme.spacing(2),
+    marginBottom: theme.spacing(2)
   },
   submit: {
     margin: theme.spacing(3, 0, 2),
@@ -40,17 +40,17 @@ const useStyles = makeStyles((theme) => ({
   heroButton: {
     backgroundColor: '#ffffff',
     marginTop: theme.spacing(2),
-    textTransform: 'none',
+    textTransform: 'none'
   },
   listButton: {
-    justifyContent: 'center',
+    justifyContent: 'center'
   },
   listButton1: {
     justifyContent: 'center'
   },
   icon: {
     marginRight: '8px'
-  },
+  }
 }));
 
 const LoginView = ({ onSubmit }) => {
@@ -90,7 +90,7 @@ const LoginView = ({ onSubmit }) => {
           <Grid container>
             <Grid item xs>
               <Link href="/sign-up" variant="body2">
-                {'Already have an account? Sign up'}
+                Already have an account? Sign up
               </Link>
             </Grid>
           </Grid>
@@ -105,9 +105,8 @@ const LoginView = ({ onSubmit }) => {
             className={classes.heroButton}
             component={RouterLink}
             to="/sign-in"
-            startIcon={<EmailIcon />}           
+            startIcon={<EmailIcon />}
           >
-             
             Sign in with email
           </Button>
           <Button

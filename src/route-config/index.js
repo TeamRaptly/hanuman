@@ -52,7 +52,7 @@ export default [
   },
   {
     path: '/mobile-otp',
-    component: DefaultLayout, //loadable(() => import('../layouts/default')),
+    component: DefaultLayout, // loadable(() => import('../layouts/default')),
     routes: [
       {
         resources: [],
