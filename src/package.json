@@ -11,6 +11,8 @@
     "dev-server": "nodemon index.js",
     "lint:css": "stylelint './**/*.js'",
     "lint:js": "eslint --max-warnings=0 *.js",
+    "lint:js-fix": "eslint --fix .",
+    "prettier:js-fix": "prettier --write .",
     "test": "jest",
     "start": "node index.js",
     "analyze-client-bundle": "node tools/bundle-analyze-client.js",

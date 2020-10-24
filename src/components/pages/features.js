@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
-import helpers from '../../helpers';
 import { withRouter } from 'react-router';
 import styled from 'styled-components';
+import helpers from '../../helpers';
 
 const FeaturesContainer = styled.div`
   margin-bottom: 12px;

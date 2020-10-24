@@ -22,6 +22,7 @@
     "react/destructuring-assignment": 0,
     "template-curly-spacing": ["error", "never"],
     "import/prefer-default-export": 0,
-    "react/prop-types": 0
+    "react/prop-types": 0,
+    "prettier/prettier": "error"
   }
 }

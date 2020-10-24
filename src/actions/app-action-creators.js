@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export const changeLanguage = (payload) => async (dispatch, getState) => {
+export const changeLanguage = (payload) => async (dispatch) => {
   try {
     const response = await axios.post('/set-language', {
       language: payload
@@ -13,6 +13,7 @@ export const changeLanguage = (payload) => async (dispatch, getState) => {
       window.location.reload();
     }
   } catch (err) {
+    // eslint-disable-next-line no-console
     console.error('Error changing language>>>>', err);
   }
 };

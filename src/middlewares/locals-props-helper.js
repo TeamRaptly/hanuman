@@ -1,4 +1,4 @@
-const { getEnabledFeatures } = require('../middlewares/features');
+const { getEnabledFeatures } = require('./features');
 
 module.exports.allPropsHelper = function (req, res, next) {
   res.locals.csrfToken =

@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { changeLanguage } from '../actions/app-action-creators';
-import { getFacts } from '../reducers/facts';
 import { Button, ListItem, List, ListItemText } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
+import { changeLanguage } from '../actions/app-action-creators';
+import { getFacts } from '../reducers/facts';
 
 const mapStateToProps = (state) => ({
   facts: getFacts(state)
@@ -20,20 +20,16 @@ const mapStateToProps = (state) => ({
 const styles = (theme) => ({
   materialButton: {
     padding: theme.spacing(1),
-    margin: theme.spacing(1),
+    margin: theme.spacing(1)
   },
   about: {
-    display: "flex",
-    justifyContent: "center",
-    margin: "10px"
+    display: 'flex',
+    justifyContent: 'center',
+    margin: '10px'
   }
 });
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   // TODO: Remove once language changer is implemented
   // Just used for debugging language changer
   handleClick = (e, language) => {
@@ -53,6 +49,8 @@ class App extends React.Component {
             </ListItem>
           );
         }
+
+        return null;
       });
 
     return (

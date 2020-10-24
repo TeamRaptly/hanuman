@@ -20,7 +20,7 @@ function addHelpers(requestedHelpers = []) {
         const contextHelpers = this.context.helpers;
         const boundSelectedHelpers = {};
 
-        for (var requestedHelperName of requestedHelpers) {
+        for (const requestedHelperName of requestedHelpers) {
           if (typeof contextHelpers[requestedHelperName] === 'undefined') {
             throw new Error(
               `Requested helper ${requestedHelperName} could not be found. Please ensure all spelling is correct.`
@@ -38,7 +38,7 @@ function addHelpers(requestedHelpers = []) {
       render() {
         return (
           <ComposedComponent
-            {...Object.assign({}, this.props, this.bindedSelectedHelpers)}
+            {...{ ...this.props, ...this.bindedSelectedHelpers }}
           />
         );
       }

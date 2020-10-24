@@ -1,6 +1,6 @@
 const path = function (keys, conf) {
   return keys.reduce(function (acc, key) {
-    return typeof acc == 'undefined' ? acc : acc[key];
+    return typeof acc === 'undefined' ? acc : acc[key];
   }, conf);
 };
 

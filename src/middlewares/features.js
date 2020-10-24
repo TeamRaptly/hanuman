@@ -22,10 +22,10 @@ function canUseFeatureFlipping(envVariable, configFlag) {
 }
 
 function getEnabledFeatures() {
-  let enabledFeatures = new Map();
+  const enabledFeatures = new Map();
 
   for (const [featureKey, featureProps] of featureDefinitions) {
-    let isFeatureAccessible = true;
+    const isFeatureAccessible = true;
     const {
       environments: featureEnvironments = [],
       ...restFeatureProps
@@ -75,7 +75,7 @@ const featuresMiddleware = (req, res, next) => {
   const flippedFeatures = [];
 
   const usingFeatureFlipping = canUseFeatureFlipping(
-    process.env.USING_FEATURES, //Can be used to turn off features runtime
+    process.env.USING_FEATURES, // Can be used to turn off features runtime
     req.config('_usingFeatureFlipping')
   );
 

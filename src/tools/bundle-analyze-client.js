@@ -1,8 +1,7 @@
 // script to enable webpack-bundle-analyzer
 process.env.NODE_ENV = process.env.NODE_ENV || 'production';
 const webpack = require('webpack');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
-  .BundleAnalyzerPlugin;
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const webpackConfigClient = require('../webpack.client');
 
 // Client bundle

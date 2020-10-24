@@ -6,9 +6,8 @@
 // folder2, env1
 // folder2, env2
 
-const createGetter = require('./create-getter');
-
 const { reduce, mergeDeepRight, xprod, map } = require('ramda');
+const createGetter = require('./create-getter');
 
 const deepMergeAll = reduce(mergeDeepRight, {});
 

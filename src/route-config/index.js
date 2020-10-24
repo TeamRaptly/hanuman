@@ -1,5 +1,5 @@
-import DefaultLayout from '../layouts/default';
 import loadable from '@loadable/component';
+import DefaultLayout from '../layouts/default';
 
 // Make default layout loadable and a separate bundle
 // useful if we have multiple layouts
@@ -11,7 +11,7 @@ export default [
   {
     path: '/',
     exact: true,
-    component: DefaultLayout, //loadable(() => import('../layouts/default')),
+    component: DefaultLayout, // loadable(() => import('../layouts/default')),
     routes: [
       {
         resources: ['facts'],
@@ -24,7 +24,7 @@ export default [
   },
   {
     path: '/about',
-    component: DefaultLayout, //loadable(() => import('../layouts/default')),
+    component: DefaultLayout, // loadable(() => import('../layouts/default')),
     routes: [
       {
         resources: [],
@@ -37,12 +37,14 @@ export default [
   },
   {
     path: '/sign-in',
-    component: DefaultLayout, //loadable(() => import('../layouts/default')),
+    component: DefaultLayout, // loadable(() => import('../layouts/default')),
     routes: [
       {
         resources: [],
         component: loadable(() =>
-          import(/* webpackChunkName: "sign-in" */ '../components/pages/sign-in')
+          import(
+            /* webpackChunkName: "sign-in" */ '../components/pages/sign-in'
+          )
         ),
         bundle: 'sign-in'
       }
@@ -50,12 +52,14 @@ export default [
   },
   {
     path: '/sign-up',
-    component: DefaultLayout, //loadable(() => import('../layouts/default')),
+    component: DefaultLayout, // loadable(() => import('../layouts/default')),
     routes: [
       {
         resources: [],
         component: loadable(() =>
-          import(/* webpackChunkName: "sign-up" */ '../components/pages/sign-up.js')
+          import(
+            /* webpackChunkName: "sign-up" */ '../components/pages/sign-up.js'
+          )
         ),
         bundle: 'sign-up'
       }
@@ -65,7 +69,7 @@ export default [
     // react-router-config use https://www.npmjs.com/package/path-to-regexp module
     // to match paths, hence the below regex
     path: '/_features(.*)',
-    component: DefaultLayout, //loadable(() => import('../layouts/default')),
+    component: DefaultLayout, // loadable(() => import('../layouts/default')),
     routes: [
       {
         resources: [],
@@ -80,7 +84,7 @@ export default [
   },
   {
     path: '*',
-    component: DefaultLayout, //loadable(() => import('../layouts/default')),
+    component: DefaultLayout, // loadable(() => import('../layouts/default')),
     routes: [
       {
         resources: [],

@@ -1,11 +1,11 @@
 import React from 'react';
 import { renderRoutes } from 'react-router-config';
 import { connect } from 'react-redux';
-import { Switch, NoSsr } from '@material-ui/core';
+import { Switch, NoSsr, Divider } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
 import { toggleThemeType } from '../actions/app-theme-action-creators';
 import { getCurrentThemeType } from '../reducers/app-theme';
-import { makeStyles } from '@material-ui/core/styles';
-import { Divider } from '@material-ui/core';
+
 import Header from '../components/header';
 import Footer from '../components/footer';
 
@@ -14,7 +14,7 @@ const mapStateToProps = (state) => ({
 });
 
 const useStyles = makeStyles((theme) => ({
-  appBarSpacer: theme.mixins.toolbar,
+  appBarSpacer: theme.mixins.toolbar
 }));
 
 function DefaultLayout(props) {
@@ -30,7 +30,7 @@ function DefaultLayout(props) {
       <div className={classes.appBarSpacer} />
       <NoSsr>
         <Switch
-          checked={props.themeType === 'light' ? false : true}
+          checked={props.themeType !== 'light'}
           onChange={props.toggleThemeType}
           color="primary"
           name="theme-type-changer"

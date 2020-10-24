@@ -18,7 +18,8 @@
 		"ms-vscode.vscode-typescript-tslint-plugin",
 		"esbenp.prettier-vscode",
 		"wesbos.theme-cobalt2",
-		"rvest.vs-code-prettier-eslint"
+		"rvest.vs-code-prettier-eslint",
+		"mutantdino.resourcemonitor"
 	]
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],

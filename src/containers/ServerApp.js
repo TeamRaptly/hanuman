@@ -34,5 +34,5 @@ export default function ServerApp(props) {
   );
 }
 
-//Exposed to server(node) so that we can only use 1 build file for server
+// Exposed to server(node) so that we can only use 1 build file for server
 export const RouteConfig = Routes;

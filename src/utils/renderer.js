@@ -4,8 +4,8 @@ import { ServerStyleSheet } from 'styled-components';
 import { ServerStyleSheets as MaterialServerStyleSheets } from '@material-ui/core/styles';
 import serialize from 'serialize-javascript';
 import { matchRoutes } from 'react-router-config';
-import { loadRouteData } from './gather-route-dependent-resources';
 import { Helmet } from 'react-helmet';
+import { loadRouteData } from './gather-route-dependent-resources';
 import ServerApp, { RouteConfig } from '../build/server.bundle';
 
 const fetchDependantServerSideResources = async (req, res) => {

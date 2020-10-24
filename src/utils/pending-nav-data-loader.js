@@ -54,7 +54,12 @@ class PendingNavDataLoader extends React.Component {
     // use a controlled <Route> to trick all descendants into
     // rendering the old location
     if (loading) {
-      return <Spinner />;
+      return (
+        <Route
+          location={previousLocation || location}
+          render={() => <Spinner />}
+        />
+      );
     }
 
     return (

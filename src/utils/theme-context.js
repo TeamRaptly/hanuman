@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
-import { getCurrentThemeType } from '../reducers/app-theme';
 import { CssBaseline } from '@material-ui/core';
+import { getCurrentThemeType } from '../reducers/app-theme';
 import theme from '../theme';
 
 const mapStateToProps = (state) => ({

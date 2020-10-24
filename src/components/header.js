@@ -33,8 +33,8 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1
   },
   appLink: {
-    textDecoration: "none",
-    color: "inherit"
+    textDecoration: 'none',
+    color: 'inherit'
   },
   list: {
     width: 250
@@ -79,10 +79,7 @@ export default function SearchAppBar() {
           <ListItemAvatar>
             <Avatar>R</Avatar>
           </ListItemAvatar>
-          <ListItemText
-            primary="Raptly"
-            variant={'h6'}
-          />
+          <ListItemText primary="Raptly" variant="h6" />
         </ListItem>
       </div>
       <Divider />
@@ -134,7 +131,7 @@ export default function SearchAppBar() {
   return (
     <div className={classes.root}>
       <AppBar>
-        <Toolbar disableGutters={true}>
+        <Toolbar disableGutters>
           <IconButton onClick={toggleDrawer('left', true)} color="inherit">
             {' '}
             <MenuIcon />
@@ -148,7 +145,9 @@ export default function SearchAppBar() {
           </SwipeableDrawer>
 
           <Typography className={classes.title} variant="h6">
-            <RouterLink className={classes.appLink} to="/">GroceriesPlus</RouterLink>
+            <RouterLink className={classes.appLink} to="/">
+              GroceriesPlus
+            </RouterLink>
           </Typography>
 
           <IconButton aria-label="search" color="inherit">
