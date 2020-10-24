@@ -3,12 +3,8 @@ import { Link as RouterLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 import helpers from '../../helpers';
 import { Helmet } from 'react-helmet';
-import App from '../App';
 import { fetchResources } from '../../actions/resources-action-creators';
 import { withStyles } from '@material-ui/core/styles';
-import ImageData from "../../utils/imageData";
-import Grid from '@material-ui/core/Grid';
-import Button from '@material-ui/core/Button';
 
 const useStyles = (theme) => ({
   breakpoint: {
@@ -44,20 +40,9 @@ export default class Home extends React.Component {
     return (
       <>
         <Helmet>
-          <title>Home page</title>
+          <title> {this.props.t('dashboard').pageTitle}</title>
         </Helmet>
-        <Grid container justify="center">
-          {ImageData.map((tile) => (
-            <Grid item xs={12} sm={6} md={6}>
-              <Button component={RouterLink} to="/about">
-                <img src={tile.img} className={classes.breakpoint} />
-              </Button>
-            </Grid>
-          ))}
-        </Grid>
-        <p>Home Page - {this.props.t('welcome')}</p>
-        <div>All the configs available: {JSON.stringify(this.props.c())}</div>
-        <App />
+
       </>
     );
   }

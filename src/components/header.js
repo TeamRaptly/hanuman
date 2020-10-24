@@ -148,7 +148,7 @@ export default function SearchAppBar() {
           </SwipeableDrawer>
 
           <Typography className={classes.title} variant="h6">
-            <RouterLink className={classes.appLink} to="/">GroceriesPlus</RouterLink>
+            <RouterLink className={classes.appLink} to="/">Gropo</RouterLink>
           </Typography>
 
           <IconButton aria-label="search" color="inherit">

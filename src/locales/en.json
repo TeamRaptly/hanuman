@@ -1,3 +1,14 @@
 {
-  "welcome": "Welcome to this project"
+  "welcome": "Welcome to this project",
+  "dashboard": {
+    "pageTitle": "Dashboard"
+  },
+  "tabs": {
+    "stocks": {
+      "header": "Stock"
+    },
+    "shopping": {
+      "header": "Shopping"
+    }
+  }
 }

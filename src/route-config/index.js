@@ -14,7 +14,7 @@ export default [
     component: DefaultLayout, //loadable(() => import('../layouts/default')),
     routes: [
       {
-        resources: ['facts'],
+        resources: [],
         component: loadable(() =>
           import(/* webpackChunkName: "home" */ '../components/pages/home')
         ),
