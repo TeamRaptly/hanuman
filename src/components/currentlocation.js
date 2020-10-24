@@ -22,6 +22,23 @@ export default class CurrentLocation extends React.Component {
     };
   }
 
+  componentDidMount() {
+    if (this.props.centerAroundCurrentLocation) {
+      if (navigator && navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition((pos) => {
+          const { coords } = pos;
+          this.setState({
+            currentLocation: {
+              lat: coords.latitude,
+              lng: coords.longitude
+            }
+          });
+        });
+      }
+    }
+    this.loadMap();
+  }
+
   componentDidUpdate(prevProps, prevState) {
     if (prevProps.google !== this.props.google) {
       this.loadMap();
@@ -42,23 +59,6 @@ export default class CurrentLocation extends React.Component {
       const center = new maps.LatLng(current.lat, current.lng);
       map.panTo(center);
     }
-  }
-
-  componentDidMount() {
-    if (this.props.centerAroundCurrentLocation) {
-      if (navigator && navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition((pos) => {
-          const { coords } = pos;
-          this.setState({
-            currentLocation: {
-              lat: coords.latitude,
-              lng: coords.longitude
-            }
-          });
-        });
-      }
-    }
-    this.loadMap();
   }
 
   loadMap() {

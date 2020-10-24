@@ -12,7 +12,7 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import { Divider, List, ListItem } from '@material-ui/core';
+import { Divider } from '@material-ui/core';
 import PhoneIcon from '@material-ui/icons/Phone';
 
 const useStyles = makeStyles((theme) => ({
