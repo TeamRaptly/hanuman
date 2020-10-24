@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 const mapStyles = {
   map: {
@@ -9,9 +8,10 @@ const mapStyles = {
   }
 };
 
-export class CurrentLocation extends React.Component {
+export default class CurrentLocation extends React.Component {
   constructor(props) {
     super(props);
+    this.mapRef = React.createRef();
 
     const { lat, lng } = this.props.initialCenter;
     this.state = {
@@ -67,10 +67,8 @@ export class CurrentLocation extends React.Component {
       const { google } = this.props;
       const { maps } = google;
 
-      const mapRef = this.refs.map;
-
       // reference to the actual DOM element
-      const node = ReactDOM.findDOMNode(mapRef);
+      const node = this.mapRef.current;
 
       const { zoom } = this.props;
       const { lat, lng } = this.state.currentLocation;
@@ -88,10 +86,10 @@ export class CurrentLocation extends React.Component {
   renderChildren() {
     const { children } = this.props;
 
-    if (!children) return;
+    if (!children) return null;
 
     return React.Children.map(children, (c) => {
-      if (!c) return;
+      if (!c) return null;
       return React.cloneElement(c, {
         map: this.map,
         google: this.props.google,
@@ -104,7 +102,7 @@ export class CurrentLocation extends React.Component {
     const style = { ...mapStyles.map };
     return (
       <div>
-        <div style={style} ref="map">
+        <div style={style} ref={this.mapRef}>
           Loading map...
         </div>
         {this.renderChildren()}
@@ -112,7 +110,6 @@ export class CurrentLocation extends React.Component {
     );
   }
 }
-export default CurrentLocation;
 
 CurrentLocation.defaultProps = {
   zoom: 14,

@@ -34,7 +34,7 @@ const translationsObject = {
   readJSONfiles: readJSONfiles(path.resolve(__dirname, `../locales/`))
 };
 
-module.exports.translations = function (req, res, next) {
+module.exports.translations = function translations(req, res, next) {
   const allLocales = createTranslations(
     translationsObject.readJSONfiles,
     config('supportedLanguages')

@@ -1,4 +1,4 @@
-module.exports.language = function (req, res, next) {
+module.exports.language = function language(req, res, next) {
   const defaultLanguage = req.config('defaultLanguage');
   const userSelectedLanguage = req.cookies && req.cookies.selectedLanguage;
   const selectedLanguage = userSelectedLanguage || defaultLanguage;
@@ -9,6 +9,7 @@ module.exports.language = function (req, res, next) {
     });
   }
 
+  // eslint-disable-next-line no-multi-assign
   req.language = res.locals.language = selectedLanguage;
   next();
 };

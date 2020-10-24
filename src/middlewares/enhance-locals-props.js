@@ -1,4 +1,8 @@
-module.exports.enhanceLocalsProps = function (req, res, next) {
+module.exports.enhanceLocalsProps = function enhanceLocalsProps(
+  req,
+  res,
+  next
+) {
   res.locals = res.locals || {};
   res.locals.props = res.locals.props || {};
 

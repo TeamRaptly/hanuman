@@ -3,10 +3,12 @@ const cacheName = 'hanuman-service-worker-app';
 // Caching notes
 // https://developers.google.com/web/ilt/pwa/caching-files-with-service-worker
 
+// eslint-disable-next-line no-restricted-globals
 self.addEventListener('install', (event) => {
+  // eslint-disable-next-line no-console
   console.log('Service worker installing...');
   event.waitUntil(
-    caches.open(cacheName).then(function (cache) {
+    caches.open(cacheName).then((cache) => {
       return cache.addAll([
         '/',
         '/about',
@@ -28,43 +30,50 @@ self.addEventListener('install', (event) => {
       ]);
     })
   );
+  // eslint-disable-next-line no-restricted-globals
   self.skipWaiting();
 });
 
+// eslint-disable-next-line no-restricted-globals
 self.addEventListener('activate', (event) => {
+  // eslint-disable-next-line no-console
   console.log('Service worker activating...');
   event.waitUntil(
-    caches.keys().then(function (cacheNames) {
+    caches.keys().then((cacheNames) => {
       return Promise.all(
         cacheNames
-          .filter(function (cacheName) {
+          .filter(() => {
             // Return true if you want to remove this cache,
             // but remember that caches are shared across
             // the whole origin
             // Change this to conditional based on resource being requested on network
             return true;
           })
-          .map(function (cacheName) {
-            return caches.delete(cacheName);
+          .map((cache) => {
+            return caches.delete(cache);
           })
       );
     })
   );
 });
 
+// eslint-disable-next-line no-restricted-globals
 self.addEventListener('fetch', (event) => {
+  // eslint-disable-next-line no-console
   console.log('Fetching:', event.request.url);
   event.respondWith(
-    caches.open(cacheName).then(function (cache) {
+    caches.open(cacheName).then((cache) => {
       return fetch(event.request)
-        .then(function (response) {
+        .then((response) => {
           cache.put(event.request, response.clone());
           return response;
         })
         .catch((error) => {
+          // eslint-disable-next-line no-console
           console.log('Error...', error);
+          // eslint-disable-next-line no-console
           console.log(`Serving ${event.request.url} from service worker cache`);
-          return cache.match(event.request).then(function (response) {
+          return cache.match(event.request).then((response) => {
             return response;
           });
         });

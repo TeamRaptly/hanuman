@@ -12,8 +12,7 @@ const fetchDependantServerSideResources = async (req, res) => {
   // const routeConfig = require('../build/routes.bundle.js').default;
   const branch = matchRoutes(RouteConfig, req.url);
   const foundBranch = branch.find(
-    ({ route, match }) =>
-      Array.isArray(route.resources) && route.resources.length
+    ({ route }) => Array.isArray(route.resources) && route.resources.length
   );
   const {
     route: { bundle: bundleToLoad }
@@ -36,6 +35,7 @@ export const renderApp = (req, res) => {
   // which can have xss script then use https://github.com/YahooArchive/xss-filters
   // for filtering inputs and then pass to state
   return fetchDependantServerSideResources(req, res).then(
+    // eslint-disable-next-line consistent-return
     ({ fetchedResources: resources, bundleToLoad }) => {
       const updatedInitialState = {
         ...res.locals.props,
@@ -84,6 +84,7 @@ export const renderApp = (req, res) => {
         });
       } catch (error) {
         // handle error
+        // eslint-disable-next-line no-console
         console.error('Error while rendering server app>>>>>>', error);
       } finally {
         sheet.seal();

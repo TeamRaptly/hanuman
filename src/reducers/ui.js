@@ -10,7 +10,7 @@ export default function (state = {}, action) {
   }
 }
 
-export const getDefaultStateFromProps = (props) => {
+export const getDefaultStateFromProps = () => {
   return {
     loading: false
   };

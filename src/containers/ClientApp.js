@@ -15,6 +15,7 @@ import ThemeContext from '../utils/theme-context';
 function ClientApp() {
   const store = createStore(
     enableBatching(reducers),
+    // eslint-disable-next-line no-underscore-dangle
     getDefaultStateFromProps(window.__initialState),
     applyMiddleware(thunk)
   );

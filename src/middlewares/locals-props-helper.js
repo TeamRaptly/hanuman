@@ -1,6 +1,6 @@
 const { getEnabledFeatures } = require('./features');
 
-module.exports.allPropsHelper = function (req, res, next) {
+module.exports.allPropsHelper = function allPropsHelper(req, res, next) {
   res.locals.csrfToken =
     typeof req.csrfToken === 'function' ? req.csrfToken() : '';
 

@@ -30,6 +30,7 @@ class Features extends React.Component {
     const featureState = [];
     const featureDefinitions = this.props.featuresDefinitions();
 
+    // eslint-disable-next-line no-restricted-syntax
     for (const [featureName, featureProps] of featureDefinitions) {
       featureState.push({
         current: this.props.f(featureName),

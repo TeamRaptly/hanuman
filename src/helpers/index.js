@@ -9,8 +9,9 @@ function getDisplayName(WrappedComponent) {
 }
 
 function addHelpers(requestedHelpers = []) {
-  return function (ComposedComponent) {
+  return function HelpersDecorator(ComposedComponent) {
     class Helpers extends React.Component {
+      // eslint-disable-next-line react/static-property-placement
       static contextTypes = {
         helpers: PropTypes.shape(helpersContextTypes).isRequired
       };
@@ -20,6 +21,7 @@ function addHelpers(requestedHelpers = []) {
         const contextHelpers = this.context.helpers;
         const boundSelectedHelpers = {};
 
+        // eslint-disable-next-line no-restricted-syntax
         for (const requestedHelperName of requestedHelpers) {
           if (typeof contextHelpers[requestedHelperName] === 'undefined') {
             throw new Error(
@@ -38,6 +40,7 @@ function addHelpers(requestedHelpers = []) {
       render() {
         return (
           <ComposedComponent
+            // eslint-disable-next-line  react/jsx-props-no-spreading
             {...{ ...this.props, ...this.bindedSelectedHelpers }}
           />
         );

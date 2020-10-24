@@ -15,7 +15,7 @@ const useStyles = makeStyles({
   }
 });
 
-const Spinner = (props) => {
+const Spinner = () => {
   const classes = useStyles();
 
   return (

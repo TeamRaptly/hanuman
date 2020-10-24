@@ -10,11 +10,15 @@ export const contextTypes = {
 };
 
 export default class CreateContext extends Component {
+  // eslint-disable-next-line react/static-property-placement
   static propTypes = {
+    // eslint-disable-next-line react/require-default-props
     children: PropTypes.node,
+    // eslint-disable-next-line react/forbid-prop-types, react/require-default-props
     helpers: PropTypes.object
   };
 
+  // eslint-disable-next-line react/static-property-placement
   static childContextTypes = {
     helpers: PropTypes.shape(contextTypes).isRequired
   };

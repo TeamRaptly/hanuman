@@ -12,10 +12,14 @@ const mapStateToProps = (state) => ({
 });
 
 class PendingNavDataLoader extends React.Component {
-  state = {
-    previousLocation: null,
-    currentLocation: this.props.location
-  };
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      previousLocation: null,
+      currentLocation: this.props.location
+    };
+  }
 
   static getDerivedStateFromProps(props, state) {
     const currentLocation = props.location;
@@ -41,6 +45,7 @@ class PendingNavDataLoader extends React.Component {
 
       this.props.fetchRouteResources(routeConfig, this.props.location);
 
+      // eslint-disable-next-line react/no-did-update-set-state
       this.setState({
         previousLocation: this.props.loading && null
       });

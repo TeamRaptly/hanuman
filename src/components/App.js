@@ -44,6 +44,7 @@ class App extends React.Component {
       this.props.facts.map((fact, i) => {
         if (fact) {
           return (
+            // eslint-disable-next-line react/no-array-index-key
             <ListItem key={i}>
               <ListItemText primary={fact.text} />
             </ListItem>

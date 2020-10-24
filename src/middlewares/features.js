@@ -1,6 +1,3 @@
-const fs = require('fs');
-const path = require('path');
-
 const FEATURE_DEFINITION_FILE = '../config/feature-definitions.json';
 const FEATURE_DEFAULT_ENVIRONMENTS = ['local', 'staging'];
 const APP_NAME = process.env.HOST_ENV || 'production';
@@ -8,6 +5,7 @@ const APP_NAME = process.env.HOST_ENV || 'production';
 let featureDefinitions;
 
 try {
+  // eslint-disable-next-line global-require
   const rawFeatures = require(FEATURE_DEFINITION_FILE);
 
   featureDefinitions = new Map(
@@ -24,6 +22,7 @@ function canUseFeatureFlipping(envVariable, configFlag) {
 function getEnabledFeatures() {
   const enabledFeatures = new Map();
 
+  // eslint-disable-next-line no-restricted-syntax
   for (const [featureKey, featureProps] of featureDefinitions) {
     const isFeatureAccessible = true;
     const {
@@ -79,6 +78,7 @@ const featuresMiddleware = (req, res, next) => {
     req.config('_usingFeatureFlipping')
   );
 
+  // eslint-disable-next-line no-restricted-syntax
   for (const [feature, featureProps] of featureDefinitions) {
     let featureSetting;
 
@@ -104,6 +104,7 @@ const featuresMiddleware = (req, res, next) => {
   if (usingFeatureFlipping) {
     if (flippedFeatures.length > 0) {
       const flippedWithValues = flippedFeatures.reduce((all, current) => {
+        // eslint-disable-next-line no-param-reassign
         all[current] = features[current];
 
         return all;

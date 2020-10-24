@@ -6,6 +6,7 @@ const objectPromises = async (obj) => {
   const results = await Promise.all(promises);
 
   return keys.reduce((result, key, i) => {
+    // eslint-disable-next-line no-param-reassign
     result[key] = results[i];
     return result;
   }, {});
@@ -18,6 +19,7 @@ const fetchResources = (req, res, resources) => {
     const resourceToFetch = resourcesList[resourceName];
 
     if (typeof resourceToFetch !== 'undefined') {
+      // eslint-disable-next-line no-param-reassign
       rcs[resourceName] = resourceToFetch(req, res);
     }
 
@@ -33,6 +35,7 @@ const loadRouteData = async (req, res, { resources }) => {
       ? fetchResources(req, res, resources)
       : Promise.resolve(null);
 
+  // eslint-disable-next-line no-return-await
   return await objectPromises(promises);
 };
 
