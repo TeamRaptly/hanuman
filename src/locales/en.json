@@ -4,6 +4,9 @@
     "sign-in": "Sign in",
     "dont-have-account": "Don't have an account? Sign Up",
     "sign-in-phone": "Sign in with phone",
-    "sign-in-google": "Sign in with google"
+    "sign-in-google": "Sign in with google",
+    "sign-up": "Sign up",
+    "already-have-account": "Already have an account? Sign in",
+    "sign-up-google": "Sign up with google"
   }
 }
