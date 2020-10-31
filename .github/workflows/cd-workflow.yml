@@ -33,9 +33,9 @@ jobs:
       matrix:
         node-version: [12.x]
 
-        steps:
-          - uses: actions/checkout@v2
-          - name: Prune unshallow and Push to Heroku
-            run: git fetch --prune --unshallow
+    steps:
+      - uses: actions/checkout@v2
+      - name: Prune unshallow and Push to Heroku
+        run: git fetch --prune --unshallow
 
-          - run: git push -f https://heroku:${{ secrets.HEROKU_API_TOKEN }}@git.heroku.com/${{ secrets.HEROKU_APP_STAGING }}.git origin/master:master
+      - run: git push -f https://heroku:${{ secrets.HEROKU_API_TOKEN }}@git.heroku.com/${{ secrets.HEROKU_APP_STAGING }}.git origin/master:master
