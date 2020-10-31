@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(2),
     textTransform: 'none'
   },
-  additionalSignInOptions: {
+  additionalMobileOtpOptions: {
     margin: theme.spacing(3, 0, 2),
     textTransform: 'none',
     fontSize: '18px'
@@ -27,7 +27,7 @@ const LoginView = ({ onSubmit }) => {
       <CssBaseline />
       <MobileOtpForm onSubmit={onSubmit} />
       <Divider />
-      <div className={classes.additionalSignInOptions}>
+      <div className={classes.additionalMobileOtpOptions}>
         <MobileOtpWithEmailButton classes={classes.additionalButtonStyles} />
         <MobileOtpWithGoogleButton classes={classes.additionalButtonStyles} />
       </div>

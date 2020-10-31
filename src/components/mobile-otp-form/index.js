@@ -14,7 +14,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import helpers from '../../helpers';
 
 const useStyles = makeStyles((theme) => ({
-  signInFormContainer: {
+  mobileOtpFormContainer: {
     marginTop: theme.spacing(8),
     display: 'flex',
     flexDirection: 'column',
@@ -25,12 +25,12 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(1),
     backgroundColor: theme.palette.secondary.main
   },
-  signInFormElement: {
+  mobileOtpFormElement: {
     width: '100%', // Fix IE 11 issue.
     marginTop: theme.spacing(1),
     marginBottom: theme.spacing(2)
   },
-  signInFormSubmit: {
+  mobileOtpFormSubmit: {
     margin: theme.spacing(3, 0, 2),
     textTransform: 'none',
     fontSize: '18px'
@@ -41,7 +41,7 @@ function MobileOtpFrom(props) {
   const classes = useStyles();
 
   return (
-    <div className={classes.signInFormContainer}>
+    <div className={classes.mobileOtpFormContainer}>
       <Avatar className={classes.lockIconAvatar}>
         <LockOutlinedIcon />
       </Avatar>
@@ -49,7 +49,7 @@ function MobileOtpFrom(props) {
         {props.t('auth.phone-otp')}
       </Typography>
       <form
-        className={classes.signInFormElement}
+        className={classes.mobileOtpFormElement}
         noValidate
         onSubmit={props.onSubmit}
       >
@@ -69,7 +69,7 @@ function MobileOtpFrom(props) {
           fullWidth
           variant="contained"
           color="primary"
-          className={classes.submit}
+          className={classes.mobileOtpFormSubmit}
         >
           {props.t('auth.get-otp')}
         </Button>

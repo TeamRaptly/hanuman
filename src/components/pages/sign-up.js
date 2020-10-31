@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(2),
     textTransform: 'none'
   },
-  additionalSignInOptions: {
+  additionalSignUpOptions: {
     margin: theme.spacing(3, 0, 2),
     textTransform: 'none',
     fontSize: '18px'
@@ -26,7 +26,7 @@ const LoginView = ({ onSubmit }) => {
       <CssBaseline />
       <SignupForm onSubmit={onSubmit} />
       <Divider />
-      <div className={classes.additionalSignInOptions}>
+      <div className={classes.additionalSignUpOptions}>
         <SignupWithGoogleButton classes={classes.additionalButtonStyles} />
       </div>
     </Container>
