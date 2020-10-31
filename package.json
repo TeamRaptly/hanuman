@@ -1,7 +1,7 @@
 {
-  "name": "hanuman",
+  "name": "hanuman-raptly",
   "version": "1.0.0",
-  "description": "This hosts the Next.js app on Firebase Cloud Functions with Firebase Hosting rewrite rules so our app is served from our Firebase Hosting URL. Each individual page bundle is served in a new call to the Cloud Function which performs the initial server render.",
+  "description": "TeamRaptly Hanuman app",
   "main": "src/index.js",
   "engines": {
     "node": "12"
@@ -33,13 +33,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vishwasc20/hanuman.git"
+    "url": "git+https://github.com/TeamRaptly/hanuman.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/vishwasc20/hanuman/issues"
+    "url": "https://github.com/TeamRaptly/hanuman/issues"
   },
-  "homepage": "https://github.com/vishwasc20/hanuman#readme"
+  "homepage": "https://github.com/TeamRaptly/hanuman#readme"
 }
