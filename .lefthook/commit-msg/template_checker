@@ -1,0 +1,21 @@
+#!bin/bash
+YELLOW='\033[1;33m'
+RED='\033[1;31m'
+NC='\033[0m'
+INPUT_FILE=$1
+SUB='COMMIT_EDITMSG'
+if [[ "$INPUT_FILE" =~ .*"$SUB".* ]]; then
+	START_LINE=`head -n1 $INPUT_FILE`
+	PATTERN="^(Hanuman)-[[:digit:]]+: (feat|chore|fix|docs|style|refactor|perf|test) - "
+	MERGE_PATTERN="^Merge .*"
+
+	if ! [[ "$START_LINE" =~ $PATTERN ]]; then
+		if ! [[ "$START_LINE" =~ $MERGE_PATTERN ]]; then
+			echo -e "${RED}Commit message doesn't match guidelines. Better commit message would be:\n"
+			echo -e "${YELLOW}Hanuman-XXXX: feat/chore/fix/docs/style/refactor/perf/test - some text${NC}"
+			echo -e "\n---------------------------------- OR ---------------------------------\n"
+			echo -e "${RED}It can be default Merge commit message.${NC}"
+  			exit 1
+  		fi
+	fi
+fi
