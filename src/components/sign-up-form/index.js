@@ -44,12 +44,12 @@ function SignupForm(props) {
         <LockOutlinedIcon />
       </Avatar>
       <Typography component="h1" variant="h5">
-        {props.t('auth.sign-in')}
+        {props.t('auth.sign-up')}
       </Typography>
       <form
         className={classes.signupFormElement}
         noValidate
-        onSubmit={onSubmit}
+        onSubmit={props.onSubmit}
       >
         <Grid container spacing={2}>
           <Grid item xs={12} sm={6}>
@@ -114,7 +114,7 @@ function SignupForm(props) {
         <Grid container justify="flex-end">
           <Grid item>
             <Link href="/sign-in" variant="body2">
-              {props.t('Already have an account? Sign in')}
+              {props.t('auth.already-have-account')}
             </Link>
           </Grid>
         </Grid>

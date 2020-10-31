@@ -7,6 +7,9 @@
     "sign-in-google": "Sign in with google",
     "sign-up": "Sign up",
     "already-have-account": "Already have an account? Sign in",
-    "sign-up-google": "Sign up with google"
+    "sign-up-google": "Sign up with google",
+    "phone-otp": "Phone OTP",
+    "get-otp": "GET OTP",
+    "Sign-in-email": "Sign in with email"
   }
 }

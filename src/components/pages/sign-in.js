@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const LoginView = ({ onSubmit, t: translate }) => {
+const LoginView = ({ onSubmit }) => {
   const classes = useStyles();
 
   return (

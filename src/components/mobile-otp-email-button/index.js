@@ -4,19 +4,19 @@ import { Link as RouterLink } from 'react-router-dom';
 import PhoneIcon from '@material-ui/icons/Phone';
 import helpers from '../../helpers';
 
-function SignInWithPhoneButton(props) {
+function MobileOtpWithEmailButton(props) {
   return (
     <Button
       variant="contained"
       fullWidth
       className={props.classes}
       component={RouterLink}
-      to="/mobile-otp"
+      to="/sign-in"
       startIcon={<PhoneIcon />}
     >
-      {props.t('auth.sign-in-phone')}
+      {props.t('auth.Sign-in-email')}
     </Button>
   );
 }
 
-export default helpers(['t'])(SignInWithPhoneButton);
+export default helpers(['t'])(MobileOtpWithEmailButton);
