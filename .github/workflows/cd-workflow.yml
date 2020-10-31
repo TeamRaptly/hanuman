@@ -1,4 +1,4 @@
-name: Hanuman CI
+name: Hanuman Raptly CD
 
 on:
   push:
