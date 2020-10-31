@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`about page component renders without crashing 1`] = `
+<Fragment>
+  <WithStyles(ForwardRef(Container))
+    className="makeStyles-aboutpage-1"
+  >
+    <WithStyles(ForwardRef(Typography))>
+      <HelmetWrapper
+        defer={true}
+        encodeSpecialCharacters={true}
+      >
+        <title>
+          About page
+        </title>
+      </HelmetWrapper>
+      <p>
+        About Page
+      </p>
+      <Link
+        to="/"
+      >
+        Home
+      </Link>
+    </WithStyles(ForwardRef(Typography))>
+  </WithStyles(ForwardRef(Container))>
+  <MapWithSearch
+    search={true}
+  />
+</Fragment>
+`;
