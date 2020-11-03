@@ -3,12 +3,12 @@ import { CssBaseline, Container, Divider } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import helpers from '../../helpers';
 import SignupForm from '../sign-up-form';
-import SignupWithGoogleButton from '../sign-up-google-button';
+import SignInWithGoogleButton from '../sign-in-google-button';
 
 const useStyles = makeStyles((theme) => ({
   additionalButtonStyles: {
     backgroundColor: '#ffffff',
-    marginTop: theme.spacing(2),
+    marginTop: theme.spacing(1),
     textTransform: 'none'
   },
   additionalSignUpOptions: {
@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const LoginView = ({ onSubmit }) => {
+const SignUp = ({ onSubmit }) => {
   const classes = useStyles();
 
   return (
@@ -27,10 +27,10 @@ const LoginView = ({ onSubmit }) => {
       <SignupForm onSubmit={onSubmit} />
       <Divider />
       <div className={classes.additionalSignUpOptions}>
-        <SignupWithGoogleButton classes={classes.additionalButtonStyles} />
+        <SignInWithGoogleButton classes={classes.additionalButtonStyles} />
       </div>
     </Container>
   );
 };
 
-export default helpers(['t'])(LoginView);
+export default helpers(['t'])(SignUp);

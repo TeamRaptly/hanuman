@@ -12,7 +12,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import helpers from '../../helpers';
 
 const useStyles = makeStyles((theme) => ({
-  signupFormContainer: {
+  signUpFormContainer: {
     marginTop: theme.spacing(8),
     display: 'flex',
     flexDirection: 'column',
@@ -28,18 +28,18 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(1),
     marginBottom: theme.spacing(2)
   },
-  signupFormSubmit: {
+  signUpFormSubmit: {
     margin: theme.spacing(3, 0, 2),
     textTransform: 'none',
     fontSize: '18px'
   }
 }));
 
-function SignupForm(props) {
+function SignUpForm(props) {
   const classes = useStyles();
 
   return (
-    <div className={classes.signupFormContainer}>
+    <div className={classes.signUpFormContainer}>
       <Avatar className={classes.lockIconAvatar}>
         <LockOutlinedIcon />
       </Avatar>
@@ -47,7 +47,7 @@ function SignupForm(props) {
         {props.t('auth.sign-up')}
       </Typography>
       <form
-        className={classes.signupFormElement}
+        className={classes.signUpFormElement}
         noValidate
         onSubmit={props.onSubmit}
       >
@@ -107,7 +107,7 @@ function SignupForm(props) {
           fullWidth
           variant="contained"
           color="primary"
-          className={classes.signupFormSubmit}
+          className={classes.signUpFormSubmit}
         >
           {props.t('auth.sign-up')}
         </Button>
@@ -123,4 +123,4 @@ function SignupForm(props) {
   );
 }
 
-export default helpers(['t'])(SignupForm);
+export default helpers(['t'])(SignUpForm);

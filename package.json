@@ -15,7 +15,7 @@
     "open-cli": "6.0.1"
   },
   "scripts": {
-    "c-install": "npm i --no-shrinkwrap && cd src && npm i",
+    "c-install": "npm ci --no-shrinkwrap && cd src && npm ci",
     "build": "cd src && npm run build",
     "dev": "cross-env HOST_ENV=local NODE_ENV=development npm-run-all --parallel dev:*",
     "dev:build-server": "cd src && npm run build-dev-server",

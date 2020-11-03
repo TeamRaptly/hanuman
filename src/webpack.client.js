@@ -5,13 +5,12 @@ const CopyPlugin = require('copy-webpack-plugin');
 
 const nodeEnv = process.env.NODE_ENV || 'production';
 const isProduction = nodeEnv === 'production';
-
 const clientConfig = {
   mode: nodeEnv,
   devtool: isProduction ? 'source-map' : 'inline-source-map',
   entry: {
-    client: './containers/ClientApp.js',
-    sw: './service-worker/index.js'
+    client: path.resolve(__dirname, 'containers/ClientApp.js'),
+    sw: path.resolve(__dirname, 'service-worker/index.js')
   },
   resolve: {
     extensions: ['.js', '.jsx']

@@ -2,9 +2,9 @@ import React from 'react';
 import { CssBaseline, Container, Divider } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import helpers from '../../helpers';
-import MobileOtpForm from '../mobile-otp-form';
-import MobileOtpWithEmailButton from '../mobile-otp-email-button';
-import MobileOtpWithGoogleButton from '../mobile-otp-google-button';
+import SignInOtpForm from '../sign-in-otp-form';
+import SignInWithEmailButton from '../sign-in-email-button';
+import SignInWithGoogleButton from '../sign-in-google-button';
 
 const useStyles = makeStyles((theme) => ({
   additionalButtonStyles: {
@@ -12,27 +12,27 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(2),
     textTransform: 'none'
   },
-  additionalMobileOtpOptions: {
+  additionalOtpOptions: {
     margin: theme.spacing(3, 0, 2),
     textTransform: 'none',
     fontSize: '18px'
   }
 }));
 
-const LoginView = ({ onSubmit }) => {
+const SignInOTP = ({ onSubmit }) => {
   const classes = useStyles();
 
   return (
     <Container component="main" maxWidth="xs">
       <CssBaseline />
-      <MobileOtpForm onSubmit={onSubmit} />
+      <SignInOtpForm onSubmit={onSubmit} />
       <Divider />
-      <div className={classes.additionalMobileOtpOptions}>
-        <MobileOtpWithEmailButton classes={classes.additionalButtonStyles} />
-        <MobileOtpWithGoogleButton classes={classes.additionalButtonStyles} />
+      <div className={classes.additionalOtpOptions}>
+        <SignInWithEmailButton classes={classes.additionalButtonStyles} />
+        <SignInWithGoogleButton classes={classes.additionalButtonStyles} />
       </div>
     </Container>
   );
 };
 
-export default helpers(['t'])(LoginView);
+export default helpers(['t'])(SignInOTP);

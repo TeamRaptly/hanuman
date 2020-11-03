@@ -12,7 +12,7 @@ const serverConfig = {
   devtool: isProduction ? 'source-map' : 'inline-source-map',
   target: 'node',
   entry: {
-    server: './containers/ServerApp.js'
+    server: path.resolve(__dirname, 'containers/ServerApp.js')
   },
   resolve: {
     extensions: ['.js', '.jsx']

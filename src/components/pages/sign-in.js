@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const LoginView = ({ onSubmit }) => {
+const SignIn = ({ onSubmit }) => {
   const classes = useStyles();
 
   return (
@@ -35,4 +35,4 @@ const LoginView = ({ onSubmit }) => {
   );
 };
 
-export default helpers(['t'])(LoginView);
+export default helpers(['t'])(SignIn);

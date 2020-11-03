@@ -11,7 +11,7 @@ function SignInWithPhoneButton(props) {
       fullWidth
       className={props.classes}
       component={RouterLink}
-      to="/mobile-otp"
+      to="/sign-in-otp"
       startIcon={<PhoneIcon />}
     >
       {props.t('auth.sign-in-phone')}

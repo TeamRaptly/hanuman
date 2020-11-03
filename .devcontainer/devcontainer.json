@@ -10,7 +10,7 @@
   // Set *default* container specific settings.json values on container create.
   "settings": {
     "workbench.colorTheme": "Cobalt2",
-    "terminal.integrated.shell.linux": "/bin/bash"
+    "terminal.integrated.shell.linux": "/bin/zsh"
   },
   // Add the IDs of extensions you want installed when the container is created.
   "extensions": [
@@ -20,7 +20,8 @@
 	"wesbos.theme-cobalt2",
 	"rvest.vs-code-prettier-eslint",
 	"mutantdino.resourcemonitor",
-	"runningcoder.react-snippets"
+	"runningcoder.react-snippets",
+	"ms-azuretools.vscode-docker"
 ],
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
   "forwardPorts": [3000]
