@@ -13,7 +13,7 @@ import helpers from '../../helpers';
 
 const useStyles = makeStyles((theme) => ({
   signUpFormContainer: {
-    marginTop: theme.spacing(8),
+    marginTop: theme.spacing(7),
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(1),
     backgroundColor: theme.palette.secondary.main
   },
-  signupFormElement: {
+  signUpFormElement: {
     width: '100%', // Fix IE 11 issue.
     marginTop: theme.spacing(1),
     marginBottom: theme.spacing(2)
@@ -37,6 +37,7 @@ const useStyles = makeStyles((theme) => ({
 
 function SignUpForm(props) {
   const classes = useStyles();
+  console.log('...signUpFormContainer...', classes);
 
   return (
     <div className={classes.signUpFormContainer}>

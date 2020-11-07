@@ -10,6 +10,7 @@ function SignInWithGoogleButton(props) {
       fullWidth
       className={props.classes}
       component={RouterLink}
+      to="/"
     >
       <Avatar
         alt="google"

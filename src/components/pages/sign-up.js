@@ -2,13 +2,13 @@ import React from 'react';
 import { CssBaseline, Container, Divider } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import helpers from '../../helpers';
-import SignupForm from '../sign-up-form';
+import SignUpForm from '../sign-up-form';
 import SignInWithGoogleButton from '../sign-in-google-button';
 
 const useStyles = makeStyles((theme) => ({
   additionalButtonStyles: {
     backgroundColor: '#ffffff',
-    marginTop: theme.spacing(1),
+    marginTop: theme.spacing(2),
     textTransform: 'none'
   },
   additionalSignUpOptions: {
@@ -24,7 +24,7 @@ const SignUp = ({ onSubmit }) => {
   return (
     <Container component="main" maxWidth="xs">
       <CssBaseline />
-      <SignupForm onSubmit={onSubmit} />
+      <SignUpForm onSubmit={onSubmit} />
       <Divider />
       <div className={classes.additionalSignUpOptions}>
         <SignInWithGoogleButton classes={classes.additionalButtonStyles} />

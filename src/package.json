@@ -9,7 +9,7 @@
     "build-dev-server": "npm run clean-server-build && webpack --config ./webpack.server.js --watch",
     "build": "npm run build-client && npm run build-server",
     "dev-server": "nodemon index.js",
-    "lint:css": "stylelint './**/*.js'",
+    "lint:css": "stylelint *.js",
     "lint:js": "eslint --fix --max-warnings=0 *.js",
     "prettier:js-fix": "prettier --write .",
     "test": "jest",
