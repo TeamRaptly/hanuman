@@ -9,6 +9,7 @@ import ContactSupportIcon from '@material-ui/icons/ContactSupport';
 import BookIcon from '@material-ui/icons/Book';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
+import helpers from '../../helpers';
 
 function MenuItemIcons(props) {
   switch (props.icon) {
@@ -37,4 +38,4 @@ function MenuItemIcons(props) {
   }
 }
 
-export default MenuItemIcons;
+export default helpers(['t'])(MenuItemIcons);

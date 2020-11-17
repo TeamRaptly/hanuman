@@ -37,7 +37,6 @@ const useStyles = makeStyles((theme) => ({
 
 function SignUpForm(props) {
   const classes = useStyles();
-  console.log('...signUpFormContainer...', classes);
 
   return (
     <div className={classes.signUpFormContainer}>
@@ -61,7 +60,7 @@ function SignUpForm(props) {
               required
               fullWidth
               id="firstName"
-              label="First Name"
+              label={props.t('auth.first-name')}
               autoFocus
             />
           </Grid>
@@ -71,7 +70,7 @@ function SignUpForm(props) {
               required
               fullWidth
               id="lastName"
-              label="Last Name"
+              label={props.t('auth.last-name')}
               name="lastName"
               autoComplete="lname"
             />
@@ -82,7 +81,7 @@ function SignUpForm(props) {
               required
               fullWidth
               id="email"
-              label="Email Address"
+              label={props.t('auth.email-ddress')}
               name="email"
               type="email"
               placeholder="Email"
@@ -95,7 +94,7 @@ function SignUpForm(props) {
               required
               fullWidth
               name="password"
-              label="Password"
+              label={props.t('auth.password')}
               type="password"
               placeholder="Password"
               id="password"
@@ -113,11 +112,9 @@ function SignUpForm(props) {
           {props.t('auth.sign-up')}
         </Button>
         <Grid container justify="flex-end">
-          <Grid item>
-            <Link href="/sign-in" variant="body2">
-              {props.t('auth.already-have-account')}
-            </Link>
-          </Grid>
+          <Link href="/sign-in" variant="body2">
+            {props.t('auth.already-have-account')}
+          </Link>
         </Grid>
       </form>
     </div>

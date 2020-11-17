@@ -38,7 +38,7 @@ function HeaderBurgerMenu(props) {
           <ListItemAvatar>
             <Avatar>R</Avatar>
           </ListItemAvatar>
-          <ListItemText primary="Raptly" variant="h6" />
+          <ListItemText variant="h6">Raptly</ListItemText>
         </ListItem>
         <Divider />
         {navigationMenu.length &&

@@ -2,6 +2,12 @@
   "welcome": "Welcome to this project",
   "auth": {
     "sign-in": "Sign in",
+    "email-ddress": "Email Address",
+    "password": "Password",
+    "first-name": "First Name",
+    "last-name": "Last Name",
+    "phone-number": "Phone Number",
+    "remember-me": "Remember me",
     "dont-have-account": "Don't have an account? Sign Up",
     "sign-in-phone": "Sign in with phone",
     "sign-in-google": "Sign in with google",
@@ -10,6 +16,20 @@
     "sign-up-google": "Sign up with google",
     "phone-otp": "Phone OTP",
     "get-otp": "GET OTP",
-    "sign-in-email": "Sign in with email"
+    "sign-in-email": "Sign in with email",
+    "home": "Home",
+    "about-page": "About Page"
+  },
+  "navigationMenu": {
+    "home": "Home",
+    "shop-by-category": "Shop by Category",
+    "stock": "Stock",
+    "shopping-list": "Shopping list",
+    "your-account": "Your Account",
+    "user-agreement": "User agreement",
+    "help": "Help",
+    "how-this-app-works": "How this app works",
+    "sign-out": "Sign Out",
+    "sign-in-sign-up": "Sign In/Sign Up"
   }
 }

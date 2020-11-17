@@ -7,52 +7,52 @@ module.exports = {
   navigationMenu: [
     {
       link: '/',
-      title: 'Home',
+      title: 'home',
       icon: 'HomeIcon'
     },
     {
       link: '/',
-      title: 'Shop by Category',
+      title: 'shop-by-category',
       icon: 'CategoryIcon'
     },
     {
       link: '/',
-      title: 'Stock',
+      title: 'stock',
       icon: 'StorageIcon'
     },
     {
       link: '/',
-      title: 'Shopping list',
+      title: 'shopping-list',
       icon: 'ShoppingCartIcon'
     },
     {
       link: '/',
-      title: 'Your Account',
+      title: 'your-account',
       icon: 'AccountBoxIcon'
     },
     {
       link: '/',
-      title: 'User agreement',
+      title: 'user-agreement',
       icon: 'VerifiedUserIcon'
     },
     {
       link: '/',
-      title: 'Help',
+      title: 'help',
       icon: 'ContactSupportIcon'
     },
     {
       link: '/',
-      title: 'How this app works',
+      title: 'how-this-app-works',
       icon: 'BookIcon'
     },
     {
       link: '/',
-      title: 'Sign Out',
+      title: 'sign-out',
       icon: 'ExitToAppIcon'
     },
     {
       link: '/sign-in',
-      title: 'Sign In/Sign Up',
+      title: 'sign-in-sign-up',
       icon: 'LockOutlinedIcon'
     }
   ]

@@ -2,6 +2,12 @@
   "welcome": "ಈ ಯೋಜನೆಗೆ ಸುಸ್ವಾಗತ",
   "auth": {
     "sign-in": "ಸೈನ್ ಇನ್ ಮಾಡಿ",
+    "email-ddress": "ಇಮೇಲ್ ವಿಳಾಸ",
+    "password": "ಗುಪ್ತಪದ",
+    "first-name": "ಮೊದಲ ಹೆಸರು",
+    "last-name": "ಕೊನೆಯ ಹೆಸರು",
+    "phone-number": "ದೂರವಾಣಿ ಸಂಖ್ಯೆ",
+    "remember-me": "ನನ್ನನ್ನು ನೆನಪಿನಲ್ಲಿ ಇಡು",
     "dont-have-account": "ಖಾತೆ ಇಲ್ಲವೇ? ಸೈನ್ ಅಪ್ ಮಾಡಿ",
     "sign-in-phone": "ಫೋನ್‌ನೊಂದಿಗೆ ಸೈನ್ ಇನ್ ಮಾಡಿ",
     "sign-in-google": "Google ನೊಂದಿಗೆ ಸೈನ್ ಇನ್ ಮಾಡಿ",
@@ -10,6 +16,20 @@
     "sign-up-google": "Google ನೊಂದಿಗೆ ಸೈನ್ ಅಪ್-ಗೂಗಲ್",
     "phone-otp": "ಫೋನ್ ಒಟಿಪಿ",
     "get-otp": "OTP ಪಡೆಯಿರಿ",
-    "sign-in-email": "ಇಮೇಲ್‌ನೊಂದಿಗೆ ಸೈನ್ ಇನ್ ಮಾಡಿ"
+    "sign-in-email": "ಇಮೇಲ್‌ನೊಂದಿಗೆ ಸೈನ್ ಇನ್ ಮಾಡಿ",
+    "home": "ಮನೆ",
+    "about-page": "ಪುಟದ ಬಗ್ಗೆ"
+  },
+  "navigationMenu": {
+    "home": "ಮನೆ",
+    "shop-by-category": "ವರ್ಗದಿಂದ ಶಾಪಿಂಗ್ ಮಾಡಿ",
+    "stock": "ಸ್ಟಾಕ್",
+    "shopping-list": "ಖರೀದಿ ಪಟ್ಟಿ",
+    "your-account": "ನಿಮ್ಮ ಖಾತೆ",
+    "user-agreement": "ಬಳಕೆದಾರರ ಒಪ್ಪಂದ",
+    "help": "ಸಹಾಯ",
+    "how-this-app-works": "ಈ ಅಪ್ಲಿಕೇಶನ್ ಹೇಗೆ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತದೆ",
+    "sign-out": "ಸೈನ್ .ಟ್ ಮಾಡಿ",
+    "sign-in-sign-up": "ಸೈನ್ ಇನ್ / ಸೈನ್ ಅಪ್"
   }
 }

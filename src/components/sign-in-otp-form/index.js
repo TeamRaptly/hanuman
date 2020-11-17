@@ -55,14 +55,14 @@ function SignInOTPForm(props) {
       >
         <TextField
           id="standard-basic"
-          label="Phone Number"
+          label={props.t('auth.phone-number')}
           fullWidth
           type="Phone"
           borderColor="primary"
         />
         <FormControlLabel
           control={<Checkbox value="remember" color="primary" />}
-          label="Remember me"
+          label={props.t('auth.remember-me')}
         />
         <Button
           type="submit"
@@ -73,6 +73,11 @@ function SignInOTPForm(props) {
         >
           {props.t('auth.get-otp')}
         </Button>
+        <Grid item xs>
+          <Link href="/sign-up" variant="body2">
+            {props.t('auth.dont-have-account')}
+          </Link>
+        </Grid>
       </form>
     </div>
   );

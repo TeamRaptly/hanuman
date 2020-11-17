@@ -58,7 +58,7 @@ function SignInForm(props) {
           margin="normal"
           required
           fullWidth
-          label="Email Address"
+          label={props.t('auth.email-ddress')}
           name="email"
           type="email"
           placeholder="Email"
@@ -69,13 +69,13 @@ function SignInForm(props) {
           required
           fullWidth
           name="password"
-          label="Password"
+          label={props.t('auth.password')}
           type="password"
           placeholder="Password"
         />
         <FormControlLabel
           control={<Checkbox value="remember" color="primary" />}
-          label="Remember me"
+          label={props.t('auth.remember-me')}
         />
         <Button
           type="submit"
@@ -86,13 +86,9 @@ function SignInForm(props) {
         >
           {props.t('auth.sign-in')}
         </Button>
-        <Grid container>
-          <Grid item xs>
-            <Link href="/sign-up" variant="body2">
-              {props.t('auth.dont-have-account')}
-            </Link>
-          </Grid>
-        </Grid>
+        <Link href="/sign-up" variant="body2">
+          {props.t('auth.dont-have-account')}
+        </Link>
       </form>
     </div>
   );

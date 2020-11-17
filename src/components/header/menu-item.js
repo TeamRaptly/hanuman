@@ -2,6 +2,7 @@ import React from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import { ListItem, ListItemIcon, ListItemText } from '@material-ui/core';
 import MenuItemIcons from './menu-item-icons';
+import helpers from '../../helpers';
 
 function MenuItem(props) {
   return (
@@ -9,9 +10,9 @@ function MenuItem(props) {
       <ListItemIcon>
         <MenuItemIcons icon={props.icon} />
       </ListItemIcon>
-      <ListItemText primary={props.title} />
+      <ListItemText primary={props.t(`navigationMenu.${props.title}`)} />
     </ListItem>
   );
 }
 
-export default MenuItem;
+export default helpers(['t'])(MenuItem);
