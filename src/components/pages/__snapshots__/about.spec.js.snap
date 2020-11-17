@@ -11,14 +11,15 @@ exports[`about page component renders without crashing 1`] = `
         encodeSpecialCharacters={true}
       >
         <title>
-          About page
+          about page
         </title>
       </HelmetWrapper>
       <p>
-        About Page
+        about page
       </p>
       <Link
         to="/"
+        variant="body2"
       >
         Home
       </Link>
