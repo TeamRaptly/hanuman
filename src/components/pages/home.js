@@ -41,7 +41,7 @@ class Home extends React.Component {
     return (
       <>
         <Helmet>
-          <title>Home page</title>
+          <title> {this.props.t('dashboard')}</title>
         </Helmet>
         <Grid container justify="center">
           {ImageData.map((tile) => (

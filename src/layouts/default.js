@@ -8,6 +8,7 @@ import { getCurrentThemeType } from '../reducers/app-theme';
 
 import Header from '../components/header';
 import Footer from '../components/footer';
+import NavTabs from '../components/navigation/tabs';
 
 const mapStateToProps = (state) => ({
   themeType: getCurrentThemeType(state)
@@ -28,6 +29,7 @@ function DefaultLayout(props) {
     <div>
       <Header open={open} handleDrawerOpen={handleDrawerOpen} />
       <div className={classes.appBarSpacer} />
+      <NavTabs />
       <NoSsr>
         <Switch
           checked={props.themeType !== 'light'}

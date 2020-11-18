@@ -14,7 +14,7 @@ export default [
     component: DefaultLayout, // loadable(() => import('../layouts/default')),
     routes: [
       {
-        resources: ['facts'],
+        resources: [],
         component: loadable(() =>
           import(/* webpackChunkName: "home" */ '../components/pages/home')
         ),
@@ -62,6 +62,36 @@ export default [
           )
         ),
         bundle: 'sign-up'
+      }
+    ]
+  },
+  {
+    path: '/stock',
+    component: DefaultLayout, // loadable(() => import('../layouts/default')),
+    routes: [
+      {
+        resources: [],
+        component: loadable(() =>
+          import(
+            '../components/pages/stock.js'
+          )
+        ),
+        bundle: 'stock'
+      }
+    ]
+  },
+  {
+    path: '/shopping',
+    component: DefaultLayout, // loadable(() => import('../layouts/default')),
+    routes: [
+      {
+        resources: [],
+        component: loadable(() =>
+          import(
+            '../components/pages/shopping.js'
+          )
+        ),
+        bundle: 'shopping'
       }
     ]
   },
