@@ -15,6 +15,7 @@ function ThemeContext(props) {
     ...theme,
     ...{
       palette: {
+        ...theme.palette,
         type: props.currentThemeType
       }
     }
