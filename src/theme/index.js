@@ -1,22 +1,22 @@
-// import red from '@material-ui/core/colors/red';
+import red from '@material-ui/core/colors/red';
 
 // Create a MUI theme instance.
 // default theme set by MUI - https://material-ui.com/customization/default-theme/
 const theme = {
   palette: {
-    type: 'light'
-    // primary: {
-    //   main: '#556cd6'
-    // },
-    // secondary: {
-    //   main: '#19857b'
-    // },
-    // error: {
-    //   main: red.A400
-    // },
-    // background: {
-    //   default: '#fff'
-    // }
+    type: 'light',
+    primary: {
+      main: '#1b5e20'
+    },
+    secondary: {
+      main: '#bf360c'
+    },
+    error: {
+      main: red.A400
+    },
+    background: {
+      default: '#fafafa'
+    }
   },
   overrides: {
     MuiCssBaseline: {

@@ -26,8 +26,8 @@ export default function IconLabelTabs() {
                 value={value}
                 onChange={handleChange}
                 variant="fullWidth"
-                indicatorColor="secondary"
-                textColor="secondary"
+                indicatorColor="primary"
+                textColor="primary"
                 aria-label="icon label tabs example"
             >
                 <Tab icon={<Dashboard />} label="Dashboard" href="/" />

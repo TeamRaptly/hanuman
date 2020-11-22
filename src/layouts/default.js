@@ -34,7 +34,7 @@ function DefaultLayout(props) {
         <Switch
           checked={props.themeType !== 'light'}
           onChange={props.toggleThemeType}
-          color="primary"
+          color="secondary"
           name="theme-type-changer"
           inputProps={{ 'aria-label': 'Change theme' }}
         />

@@ -31,7 +31,7 @@ class Stock extends React.Component {
     return (
       <>
         <Helmet>
-          <title> {this.props.t('stock')}</title>
+          <title>Stock</title>
         </Helmet>
 
         <div>More info on {this.props.t('stock')}</div>

@@ -31,7 +31,7 @@ class Shopping extends React.Component {
     return (
       <>
         <Helmet>
-          <title> {this.props.t('shopping')}</title>
+          Shopping
         </Helmet>
 
         <div>More info on {this.props.t('shopping')}</div>

@@ -58,7 +58,7 @@ class App extends React.Component {
       <>
         <List>{facts}</List>
         <Button
-          color="primary"
+          color="secondary"
           variant="contained"
           className={classes.materialButton}
           onClick={(e) => this.handleClick(e, 'en')}
