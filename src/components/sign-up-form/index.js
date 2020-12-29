@@ -81,7 +81,7 @@ function SignUpForm(props) {
               required
               fullWidth
               id="email"
-              label={props.t('auth.email-ddress')}
+              label={props.t('auth.email-address')}
               name="email"
               type="email"
               placeholder="Email"

@@ -2,7 +2,7 @@
   "welcome": "Welcome to this project",
   "auth": {
     "sign-in": "Sign in",
-    "email-ddress": "Email Address",
+    "email-address": "Email Address",
     "password": "Password",
     "first-name": "First Name",
     "last-name": "Last Name",

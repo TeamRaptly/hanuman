@@ -1,0 +1,127 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`sign-up-form component renders correctly 1`] = `
+<div
+  className="makeStyles-signUpFormContainer-1"
+>
+  <WithStyles(ForwardRef(Avatar))
+    className="makeStyles-lockIconAvatar-2"
+  >
+    <LockOutlinedIcon />
+  </WithStyles(ForwardRef(Avatar))>
+  <WithStyles(ForwardRef(Typography))
+    component="h1"
+    variant="h5"
+  >
+    sign-up page
+  </WithStyles(ForwardRef(Typography))>
+  <form
+    className="makeStyles-signUpFormElement-3"
+    noValidate={true}
+  >
+    <WithStyles(ForwardRef(Grid))
+      container={true}
+      spacing={2}
+    >
+      <WithStyles(ForwardRef(Grid))
+        item={true}
+        sm={6}
+        xs={12}
+      >
+        <WithStyles(ForwardRef(TextField))
+          autoComplete="fname"
+          autoFocus={true}
+          fullWidth={true}
+          id="firstName"
+          label="first name"
+          name="firstName"
+          required={true}
+          variant="outlined"
+        />
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
+        item={true}
+        sm={6}
+        xs={12}
+      >
+        <WithStyles(ForwardRef(TextField))
+          autoComplete="lname"
+          fullWidth={true}
+          id="lastName"
+          label="last name"
+          name="lastName"
+          required={true}
+          variant="outlined"
+        />
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
+        item={true}
+        xs={12}
+      >
+        <WithStyles(ForwardRef(TextField))
+          autoComplete="email"
+          fullWidth={true}
+          id="email"
+          label="email address"
+          name="email"
+          placeholder="Email"
+          required={true}
+          type="email"
+          variant="outlined"
+        />
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
+        item={true}
+        xs={12}
+      >
+        <WithStyles(ForwardRef(TextField))
+          fullWidth={true}
+          label="phone number"
+          margin="normal"
+          name="phone"
+          placeholder="Phone"
+          required={true}
+          type="number"
+          variant="outlined"
+        />
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
+        item={true}
+        xs={12}
+      >
+        <WithStyles(ForwardRef(TextField))
+          autoComplete="current-password"
+          fullWidth={true}
+          id="password"
+          label="password"
+          name="password"
+          placeholder="Password"
+          required={true}
+          type="password"
+          variant="outlined"
+        />
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Button))
+      className="makeStyles-signUpFormSubmit-4"
+      color="primary"
+      fullWidth={true}
+      type="submit"
+      variant="contained"
+    >
+      sign-up page
+    </WithStyles(ForwardRef(Button))>
+    <WithStyles(ForwardRef(Grid))
+      container={true}
+      justify="flex-end"
+    >
+      <WithStyles(ForwardRef(Link))
+        href="/sign-in"
+        variant="body2"
+      >
+        already have an account
+      </WithStyles(ForwardRef(Link))>
+    </WithStyles(ForwardRef(Grid))>
+  </form>
+</div>
+`;

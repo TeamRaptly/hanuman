@@ -58,7 +58,7 @@ function SignInForm(props) {
           margin="normal"
           required
           fullWidth
-          label={props.t('auth.email-ddress')}
+          label={props.t('auth.email-address')}
           name="email"
           type="email"
           placeholder="Email"
