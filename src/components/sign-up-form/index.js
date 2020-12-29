@@ -91,6 +91,18 @@ function SignUpForm(props) {
           <Grid item xs={12}>
             <TextField
               variant="outlined"
+              margin="normal"
+              required
+              fullWidth
+              label={props.t('auth.phone-number')}
+              name="phone"
+              type="number"
+              placeholder="Phone"
+            />
+          </Grid>
+          <Grid item xs={12}>
+            <TextField
+              variant="outlined"
               required
               fullWidth
               name="password"

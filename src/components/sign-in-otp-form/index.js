@@ -57,7 +57,7 @@ function SignInOTPForm(props) {
           id="standard-basic"
           label={props.t('auth.phone-number')}
           fullWidth
-          type="Phone"
+          type="Number"
           borderColor="primary"
         />
         <FormControlLabel
